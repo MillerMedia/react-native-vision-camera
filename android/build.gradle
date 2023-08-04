@@ -128,7 +128,12 @@ android {
   buildToolsVersion getExtOrDefault('buildToolsVersion')
   ndkVersion getExtOrDefault('ndkVersion')
 
-  buildFeatures { viewBinding = true if (REACT_NATIVE_VERSION >= 71) { prefab true } }
+  buildFeatures {
+    viewBinding = true
+    if (REACT_NATIVE_VERSION >= 71) {
+        prefab true
+    }
+  }
 
   defaultConfig {
     minSdkVersion 21
